@@ -18,7 +18,7 @@ header {
     position: fixed;
     top: 2%;
     background-color:#ccf0d8;
-    height: 10%;
+    height: 60px;
     width: 100%;
     z-index: 1;
 }
@@ -28,6 +28,7 @@ header {
     width: 20%;
     height: 100%;
     right: 10%;
+    top: 25%;
     text-align: center;
     font-size: 12px;
     float:right;
@@ -36,7 +37,6 @@ header {
 .nav {
     float: left;
     padding: 5%;
-    margin-top: 6%;
     border-right-style: solid;
     border-right-color: #0e1a6f;
     border-right-width: 1px;
@@ -45,7 +45,6 @@ header {
 .navEnd {
     float: left;
     padding: 5%;
-    margin-top: 6%;
 }
 
 .clearfix::after {
@@ -62,7 +61,7 @@ header {
     background-color:#0e1a6f;
     color: white;
     text-align: center;
-    padding: 1.5% 0;
+    padding: 15px 0;
     font-size: 32px;
     float: left;
 }
@@ -206,43 +205,59 @@ textarea {
     width: 100%;
 }
 
-@media screen (max-width: 980px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+@media only screen and (max-width: 980px) {
+    #name {
+        left: 12%;
+        width: 30%;
+    }
+
+    #navigation {
+        width: 30%;
+        right: 10%;
+        top: 20%;
+    }
 }
 
-@media screen (max-width: 768px) {
-    /* For tablets: */
-    .col-m-1 {width: 8.33%;}
-    .col-m-2 {width: 16.66%;}
-    .col-m-3 {width: 25%;}
-    .col-m-4 {width: 33.33%;}
-    .col-m-5 {width: 41.66%;}
-    .col-m-6 {width: 50%;}
-    .col-m-7 {width: 58.33%;}
-    .col-m-8 {width: 66.66%;}
-    .col-m-9 {width: 75%;}
-    .col-m-10 {width: 83.33%;}
-    .col-m-11 {width: 91.66%;}
-    .col-m-12 {width: 100%;}
+@media screen and (max-width: 768px) {
+    #name {
+        left: 3%;
+        width: 40%;
+    }
+
+    #navigation {
+        width: 40%;
+        right: 1%;
+        top: 20%;
+    }
 }
 
-@media screen (max-width: 640px) {
-    [class*="col-"] {
-    width: 100%;}
+@media screen and (max-width: 640px) {
+     
     header {
         position: static;
     }
     
+    #name {
+        width: 100%;
+        left: 0%;
+    }
+
+    #navigation {
+        width: 100%;
+        background-color: #ccf0d8;
+        right: 0;
+        top: 0;
+    }
+
+    .nav {
+        width: 33%;
+        font-size: 16px;
+        padding: 21px 0;
+    }
+
+    .navEnd {
+        width: 33%;
+        font-size: 16px;
+        padding: 21px 0;
+    }
 }
