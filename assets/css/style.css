@@ -2,8 +2,15 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     background-image: url("../images/background.png");
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 h1, h3, h4 {
@@ -14,9 +21,14 @@ h2, p, footer {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+#container {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 15%;
+}
+
 header {
     position: fixed;
-    top: 2%;
     background-color:#ccf0d8;
     height: 60px;
     width: 100%;
@@ -68,15 +80,17 @@ header {
 
 #wrapper {
     width: 960px;
-    position: absolute;
+    position: relative;
     top: 85px;
     left: 10.5%;
+    min-height: 100%;
 }
 
 aside {
     width: 270px;
     float: right;
     background-color: rgb(228, 229, 226);
+    position: relative;
 }
 
 #connect {
@@ -103,7 +117,6 @@ h4 {
 
 .rightLink {
     float: left;
-    height: 33%;
     width: 33%;
     padding: 5%;
 }
@@ -129,6 +142,7 @@ section {
     float: left;
     background-color: rgb(228, 229, 226);
     padding-bottom: 10%;
+    position: relative;
 }
 
 #profilePicture {
@@ -149,10 +163,10 @@ p.two {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 50px;
     background-color: #ccf0d8;
     color: #0e1a6f;
     border-top-style: solid;
@@ -260,6 +274,22 @@ textarea {
         width: 100%;
     }
 
+    form {
+        margin: 0 10%;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    #contactForm {
+        margin-left: 0;
+    }
+
 
 }
 
@@ -273,6 +303,40 @@ textarea {
         width: 40%;
         right: 1%;
     }
+
+    section {
+        width: 90%;
+        margin-left: 5%;
+        float:none;
+    }
+
+    aside {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    wrapper {
+        left: 0;
+    }
+
+    h4{
+        text-align: left;
+    }
+
+    .rightLink {
+        width: 15%;
+        padding: 5px;
+    }
+
+    #links {
+        margin-left: 11%;
+        margin-bottom: 20%;
+    }
+
+    #container {
+        padding-bottom: 20%;
+    }
+
 }
 
 @media screen and (max-width: 640px) {
@@ -304,5 +368,9 @@ textarea {
         width: 33%;
         font-size: 16px;
         padding: 21px 0;
+    }
+
+    #container {
+        padding-bottom: 25%;
     }
 }
